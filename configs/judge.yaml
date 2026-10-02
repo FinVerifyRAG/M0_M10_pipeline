@@ -1,0 +1,63 @@
+# configs/judge.yaml
+# M8: Judge + Decision configuration
+# ------------------------------------
+
+# ── V3 Judge (LLM) ───────────────────────────────────────────────────────────
+judge:
+  # Model used for the V3 judge (strong, separate family from the generator)
+  # Generator uses Qwen2.5-7B; judge should be from a different model family
+  # or a significantly larger model.
+  model_id: "openai/gpt-oss-120b"
+
+  # Path to the judge system prompt
+  prompt_path: "judge/prompts/judge_v1.txt"
+  prompt_version: "v1.0.0"
+
+  # Maximum LLM parse retries on malformed JSON output
+  max_retries: 1
+
+  # Hard cap on judge invocations per query (cost control)
+  max_calls_per_query: 20
+
+  # Maximum evidence characters sent to judge (context window safety)
+  max_evidence_chars: 8000
+
+  # Temperature for judge LLM (must be 0 for reproducibility)
+  temperature: 0.0
+
+  # Guarantee handling mode:
+  # 'calibrated': end-to-end pipeline jointly calibrated with judge (ideal)
+  # 'empirical':  judge operates outside M7 bounds (pre-calibration default)
+  guarantee_mode: "empirical"
+
+# ── Decision Router ───────────────────────────────────────────────────────────
+router:
+  # Path to certified thresholds from M7 certify
+  thresholds_path: "models/guarantee/thresholds.json"
+
+  # Fallback behavior when a stratum is not found in thresholds.json
+  # "abstain": treat missing strata as ABSTAINED (safe default)
+  # "uncertain": send to judge
+  missing_stratum_fallback: "abstain"
+
+# ── Answer Combination ────────────────────────────────────────────────────────
+combine:
+  # Rule for answer-level status:
+  # "strict": FULLY_SUPPORTED only if ALL atoms pass
+  # "majority": FULLY_SUPPORTED if >50% atoms pass (less conservative)
+  answer_rule: "strict"
+
+# ── Answer Rewrite ────────────────────────────────────────────────────────────
+rewrite:
+  # Mode for rewriting answers with unverified atoms:
+  # "flag"           : inline [⚠ UNVERIFIED] markers (recommended)
+  # "trim"           : remove sentences with bad atoms
+  # "stub_on_abstain": stub message when fully abstained
+  # "none"           : only prepend disclaimer
+  mode: "flag"
+
+# ── Logging & Metrics ─────────────────────────────────────────────────────────
+logging:
+  # Log judge call count, latency, and verdict breakdown per query
+  log_judge_calls: true
+  log_coverage:    true

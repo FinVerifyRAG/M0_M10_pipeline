@@ -1,0 +1,15 @@
+pipeline:
+  seed: 42
+  experiment_name: "regguard_v1"
+  snapshot_date: "2024-03-01"
+
+models:
+  generator: "qwen2.5:7b-instruct-q4_K_M"
+  embedder: "BAAI/bge-small-en-v1.5"
+  reranker: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  judge: "openai/gpt-oss-120b"
+
+prompts:
+  answer_v1: "v1.0.0"
+  extract_v1: "v1.0.0"
+  judge_v1: "v1.0.0"

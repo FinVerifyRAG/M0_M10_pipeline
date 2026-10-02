@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Vector Databases & Model Indexes
+.chroma_db/
+.bm25_index.pkl
+*.pkl
+*.bin
+*.pt
+*.safetensors
+*.onnx
+
+# Datasets and Large Binary Files
+RBI-GUIDELINES/
+*.pdf
+evaluation_report.json
+
+# Environment variables and virtual environments
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# IDE & Editor files
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Excluded folders
+spam/

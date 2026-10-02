@@ -1,0 +1,5 @@
+{
+  "status": "not_available",
+  "reason": "no recorded per-query latency",
+  "simulated": false
+}

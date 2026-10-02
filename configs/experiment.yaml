@@ -1,0 +1,60 @@
+# Single driver for paper runs. Stage YAMLs stay the source for model
+# hyperparameters; this file selects provider, seeds, and strictness.
+strict: true
+seed: 42
+seeds: [42, 43, 44, 45, 46]
+
+provider:
+  # Env vars override these defaults. Do not hardcode an API model id here.
+  base_url: "http://localhost:11434/v1"
+  model: "qwen2.5:7b-instruct-q4_K_M"
+  api_key_env: "LLM_API_KEY"
+
+rate_limit:
+  # Token bucket: requests_per_second <= 0 disables waiting (unit tests).
+  requests_per_second: 0.4
+  capacity: 2
+  max_retries: 6
+  backoff_min_seconds: 1.0
+  backoff_max_seconds: 60.0
+
+s_mech:
+  # Local Hugging Face id. Never the API model name (qwen/qwen3.8-27b is not
+  # a local repo and fails device_map). Set enabled: true only when those
+  # weights are on disk. If the primary model cannot load, the named fallback
+  # is tried once and the attempt is logged. Strict mode raises if both fail.
+  # There is no silent 0.5 score. enabled: false skips the download and
+  # records the signal as missing.
+  enabled: false
+  model_id: "Qwen/Qwen2.5-0.5B-Instruct"
+  fallback_model_id: "sshleifer/tiny-gpt2"
+  cache_dir: ".signal_cache/s_mech"
+
+llm_extract:
+  json_mode: true
+  max_parse_failure_rate: 0.05
+
+guarantee:
+  eps: 0.05
+  delta: 0.10
+  pvalue: binomial
+  min_atoms_per_side: 150
+
+drift:
+  detector: selective_risk_monitor
+  cutoff_date: "2024-01-01"
+  window_months: 6
+  half_life_days: 180
+
+paths:
+  pipeline: configs/pipeline.yaml
+  signals: configs/signals.yaml
+  verify: configs/verify.yaml
+  guarantee: configs/guarantee.yaml
+  judge: configs/judge.yaml
+  questions: data/questions/questions.jsonl
+  splits: data/splits
+  gold_chunks: data/gold/chunks.jsonl
+  gold_atoms: data/gold/atoms.jsonl
+  aggregator: models/aggregator/aggregator_v1.pkl
+  results: results

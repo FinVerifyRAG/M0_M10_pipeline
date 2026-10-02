@@ -1,0 +1,87 @@
+# configs/guarantee.yaml
+# M7: Risk Control and Drift Calibration configuration
+# ------------------------------------------------------
+
+# ── Learn-then-Test (LTT) ────────────────────────────────────────────────────
+ltt:
+  # Target selective risk: among ACCEPTED atoms, at most eps_accept are wrong.
+  eps_accept:  0.05
+
+  # Looser threshold: atoms with risk > eps_abstain threshold are ABSTAINED.
+  # Atoms between accept_below and abstain_above are UNCERTAIN (go to M8 judge).
+  eps_abstain: 0.20
+
+  # Family-wise Type-I error rate (split across strata via Bonferroni).
+  delta: 0.10
+
+  # Grid resolution for lambda search.
+  n_grid: 200
+
+  # Use Hoeffding-Bentkus bound (True) or plain binomial (False).
+  # HB is distribution-free and tighter for small samples.
+  use_hb: true
+
+# ── Mondrian Stratification ──────────────────────────────────────────────────
+mondrian:
+  # Minimum calibration atoms for a stratum to be kept standalone.
+  # Strata with fewer atoms are merged upward: reg|type -> *|type -> *|*
+  n_min: 100
+
+  # Supported regulators (for one-hot and stratum keys)
+  regulators:
+    - SEBI
+    - RBI
+    - INCOMETAX
+    - MF
+    - OTHER
+
+  # Supported atom types
+  atom_types:
+    - RATE
+    - THRESHOLD
+    - DATE
+    - SECTION
+    - ENTITY
+    - APPLICABILITY
+
+# ── Drift Detection ──────────────────────────────────────────────────────────
+drift:
+  # KS test p-value threshold for declaring drift
+  ks_threshold: 0.05
+
+  # MMD^2 threshold for declaring drift
+  mmd_threshold: 0.01
+
+  # Minimum number of recent atoms before running a drift test
+  min_recent: 30
+
+  # Strategies: static | sliding_window | recency_weighted | triggered
+  default_strategy: static
+
+  # sliding_window: keep atoms from the last N months
+  window_months: 6
+
+  # recency_weighted: exponential decay half-life in days
+  half_life_days: 180.0
+
+# ── Simulation ────────────────────────────────────────────────────────────────
+simulation:
+  # Number of random splits to estimate the violation rate
+  n_splits: 1000
+
+  # Fraction of data used for calibration in each split
+  calib_frac: 0.5
+
+  # RNG seed
+  seed: 42
+
+# ── I/O Paths ─────────────────────────────────────────────────────────────────
+paths:
+  # Input: calibration atoms (JSONL with risk, label, regulator, atom_type, date)
+  calib_path:   data/calibration/atoms_calib.jsonl
+
+  # Output: certified thresholds
+  thresholds_path: models/guarantee/thresholds.json
+
+  # Output: simulation results
+  simulation_out: results/simulation_results.json

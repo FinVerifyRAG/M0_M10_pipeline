@@ -1,0 +1,11 @@
+{
+  "status": "not_certifiable",
+  "reason": "ablations retrain on labeled train.jsonl; that file is absent",
+  "simulated": false,
+  "full_regguard": {
+    "condition": "Full RegGuard (all components)",
+    "hallucination_rate": 0.0,
+    "coverage": 0.5,
+    "aurc": 0.22669
+  }
+}

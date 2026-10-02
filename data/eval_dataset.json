@@ -1,0 +1,37 @@
+[
+  {
+    "query_id": "q1",
+    "query": "What are the Know Your Customer (KYC) guidelines and risk categorization requirements for banks?",
+    "target_doc_keyword": "KYC",
+    "issuer": "RBI",
+    "expected_keywords": ["know your customer", "risk categorization", "due diligence"]
+  },
+  {
+    "query_id": "q2",
+    "query": "What is the Cash Reserve Ratio (CRR) requirement and how is it maintained by banks?",
+    "target_doc_keyword": "Cash Reserve Ratio",
+    "issuer": "RBI",
+    "expected_keywords": ["cash reserve ratio", "crr", "ndtl"]
+  },
+  {
+    "query_id": "q3",
+    "query": "What are the master circular guidelines for Merchant Bankers registered with SEBI?",
+    "target_doc_keyword": "Merchant_Bankers",
+    "issuer": "SEBI",
+    "expected_keywords": ["merchant bankers", "compliance", "lead manager"]
+  },
+  {
+    "query_id": "q4",
+    "query": "What regulations govern Alternative Investment Funds (AIFs) under SEBI?",
+    "target_doc_keyword": "Alternative_Investment_Funds",
+    "issuer": "SEBI",
+    "expected_keywords": ["alternative investment funds", "aif", "sponsor"]
+  },
+  {
+    "query_id": "q5",
+    "query": "What are the RBI guidelines regarding Lead Bank Scheme and credit flow?",
+    "target_doc_keyword": "Lead Bank Scheme",
+    "issuer": "RBI",
+    "expected_keywords": ["lead bank scheme", "district credit plan", "dlcc"]
+  }
+]

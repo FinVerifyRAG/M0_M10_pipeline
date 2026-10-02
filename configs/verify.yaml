@@ -1,0 +1,43 @@
+# configs/verify.yaml
+# M5 Verification Cascade Configuration
+
+# --- V1 Deterministic ---
+v1:
+  # Types handled deterministically; others go straight to V2
+  deterministic_types: [RATE, THRESHOLD, DATE, SECTION]
+  # Relative tolerance for numeric comparisons (e.g. rounding artefacts)
+  numeric_rel_tol: 1.0e-6
+
+# --- V2 NLI ---
+v2:
+  # Local checkpoint path (set after fine-tuning) or HF Hub model ID.
+  # Override with env-var NLI_MODEL_PATH.
+  model_path: "cross-encoder/nli-deberta-v3-large"
+
+  # Tokenizer max input length (DeBERTa-v3-large supports 512)
+  max_length: 512
+
+  # Batch size for inference (increase if GPU memory allows)
+  batch_size: 8
+
+  # Note: entailment threshold is NOT set here.
+  # M7 (guarantee/) calibrates and certifies per-stratum thresholds.
+
+# --- NLI Training ---
+nli_train:
+  base_model: "microsoft/deberta-v3-large"
+  epochs: 4
+  learning_rate: 1.0e-5
+  batch_size: 16
+  seed: 42
+  val_fraction: 0.10
+  early_stopping_patience: 3
+  output_dir: "models/nli_deberta_v3"
+
+# --- NLI Data Generation ---
+nli_data:
+  atoms_path:  "data/processed/atoms_labeled.jsonl"
+  chunks_path: "data/processed/chunks.jsonl"
+  out_path:    "data/processed/nli_pairs.jsonl"
+  n_neutral_per_atom: 2
+  seed: 42

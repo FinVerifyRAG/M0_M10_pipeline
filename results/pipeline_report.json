@@ -1,0 +1,426 @@
+{
+  "generated": "2026-10-02",
+  "dataset": {
+    "n_chunks": 42986,
+    "n_queries": 5,
+    "n_atoms_total": 20
+  },
+  "queries": [
+    {
+      "question": "What is the minimum Capital Adequacy Ratio required for scheduled commercial banks under RBI guidelines?",
+      "query_date": "2024-01-01",
+      "answer": "\u26a0 Note: This answer contains one or more claims that could not be fully verified against the available evidence. Flagged claims are marked with [\u26a0].\n\nBased on the provided evidence, the minimum Capital Adequacy Ratio (CRAR) required for banks (including scheduled commercial banks) is **15 per cent** on an ongoing basis [RBI_RBI_2008-09_302.DBOD.No.BP.BC.89_21.04.141_2008-09_dated_December_1__2008___753097d3_chunk_13].\n\nThis requirement is also explicitly stated for [\u26a0 UNVERIFIED: Small Finance Banks], which are a category of scheduled commercial banks, noting that they are required to maintain a minimum capital adequacy ratio of **15 per cent** of its risk weighted assets (RWA) on a continuous basis [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Licensing__Guidelines__2025__00ce7918_chunk_20].",
+      "original_answer": "Based on the provided evidence, the minimum Capital Adequacy Ratio (CRAR) required for banks (including scheduled commercial banks) is **15 per cent** on an ongoing basis [RBI_RBI_2008-09_302.DBOD.No.BP.BC.89_21.04.141_2008-09_dated_December_1__2008___753097d3_chunk_13].\n\nThis requirement is also explicitly stated for Small Finance Banks, which are a category of scheduled commercial banks, noting that they are required to maintain a minimum capital adequacy ratio of **15 per cent** of its risk weighted assets (RWA) on a continuous basis [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Licensing__Guidelines__2025__00ce7918_chunk_20].",
+      "answer_status": "PARTIALLY_VERIFIED",
+      "coverage": 0.5,
+      "n_atoms": 2,
+      "n_supported": 0,
+      "n_verified": 1,
+      "n_uncertain": 0,
+      "n_abstained": 0,
+      "n_not_verified": 1,
+      "judge_calls": 2,
+      "latency": {
+        "retrieve": 0.499,
+        "generate": 0.012,
+        "extract": 0.007,
+        "verify": 5.817,
+        "score": 9.788,
+        "decide": 1.349,
+        "rewrite": 0.0
+      },
+      "sources": [
+        {
+          "chunk_id": "RBI_RBI_2024-25_08_DOR.CAP.REC.4_21.06.201_2024-25__88b46006_chunk_118",
+          "regulator": "RBI",
+          "section": "9.3.5 Once the bank has calculated the capital charge for operational risk under the Basic"
+        },
+        {
+          "chunk_id": "RBI_Master_Direction___Reserve_Bank_of_India__Asset_Reconstruction_Companies__Directions__2024__Updated_as_on_April_23__2025___e28bff71_chunk_28",
+          "regulator": "RBI",
+          "section": "19.2 The NPAs shall be classified further as-"
+        },
+        {
+          "chunk_id": "RBI_RBI_2008-09_302.DBOD.No.BP.BC.89_21.04.141_2008-09_dated_December_1__2008___753097d3_chunk_13",
+          "regulator": "RBI",
+          "section": "3 are the Supervisory Review and Evaluation Process (SREP) and Market"
+        },
+        {
+          "chunk_id": "RBI_RBI_2024-25_08_DOR.CAP.REC.4_21.06.201_2024-25__88b46006_chunk_99",
+          "regulator": "RBI",
+          "section": "2015 on Prudential Guidelines on Capital Adequacy and Market Discipline - New Capital"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Asset_Reconstruction_Companies__Directions__2025__Updated_as_on_March_10__2026___1f9918b6_chunk_30",
+          "regulator": "RBI",
+          "section": "97. The NPAs shall be classified further as-"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Small_Finance_Banks___Licensing__Guidelines__2025__00ce7918_chunk_20",
+          "regulator": "RBI",
+          "section": "67.  Capital requirement: The minimum net worth of the proposed SFB shall be \u20b9150"
+        }
+      ],
+      "family": "rate"
+    },
+    {
+      "question": "What are the KYC norms for opening a savings account as per RBI master circular?",
+      "query_date": "2024-01-01",
+      "answer": "Based on the provided evidence, the specific KYC norms for opening a **savings account** are detailed under the section for **Simplified Due Diligence** for **Self Help Groups (SHGs)**. The evidence does not provide general norms for individual savings accounts, but rather specific simplified norms for SHGs.\n\nThe norms are as follows:\n\n*   **Customer Due Diligence (CDD) Requirement:** The bank shall **not** require CDD of all the members of an SHG while opening the savings bank account of the SHG [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n*   **Office Bearers:** The CDD of all the **office bearers** shall suffice for opening the account [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n*   **Credit Linking:** The bank may undertake CDD of all the members of an SHG at the time of **credit linking** of SHGs [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n\n**Note:** The evidence also outlines norms for **Non-Resident Ordinary (NRO) accounts** for foreign students, which are distinct from standard savings accounts. For these accounts, the bank may open the account based on a passport (with visa and immigration endorsement), proof of identity/address in the home country, a photograph, and an admission letter. Pending address verification (within 30 days), foreign remittances are capped at **USD 1,000** or equivalent, and aggregate withdrawals are capped at **\u20b950,000** [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].",
+      "original_answer": "Based on the provided evidence, the specific KYC norms for opening a **savings account** are detailed under the section for **Simplified Due Diligence** for **Self Help Groups (SHGs)**. The evidence does not provide general norms for individual savings accounts, but rather specific simplified norms for SHGs.\n\nThe norms are as follows:\n\n*   **Customer Due Diligence (CDD) Requirement:** The bank shall **not** require CDD of all the members of an SHG while opening the savings bank account of the SHG [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n*   **Office Bearers:** The CDD of all the **office bearers** shall suffice for opening the account [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n*   **Credit Linking:** The bank may undertake CDD of all the members of an SHG at the time of **credit linking** of SHGs [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].\n\n**Note:** The evidence also outlines norms for **Non-Resident Ordinary (NRO) accounts** for foreign students, which are distinct from standard savings accounts. For these accounts, the bank may open the account based on a passport (with visa and immigration endorsement), proof of identity/address in the home country, a photograph, and an admission letter. Pending address verification (within 30 days), foreign remittances are capped at **USD 1,000** or equivalent, and aggregate withdrawals are capped at **\u20b950,000** [RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50] [RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51] [RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50] [RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50].",
+      "answer_status": "FULLY_SUPPORTED",
+      "coverage": 1.0,
+      "n_atoms": 6,
+      "n_supported": 2,
+      "n_verified": 4,
+      "n_uncertain": 0,
+      "n_abstained": 0,
+      "n_not_verified": 0,
+      "judge_calls": 4,
+      "latency": {
+        "retrieve": 0.696,
+        "generate": 0.014,
+        "extract": 3.652,
+        "verify": 2.904,
+        "score": 19.787,
+        "decide": 58.614,
+        "rewrite": 0.0
+      },
+      "sources": [
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Local_Area_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___debb9a90_chunk_50",
+          "regulator": "RBI",
+          "section": "48.  Simplified KYC norms for Foreign Portfolio Investors (FPIs):"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Small_Finance_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___f65add8b_chunk_51",
+          "regulator": "RBI",
+          "section": "50. Simplified KYC norms for Foreign Portfolio Investors (FPIs):"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Regional_Rural_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___e61bb52e_chunk_50",
+          "regulator": "RBI",
+          "section": "48.  Simplified KYC norms for Foreign Portfolio Investors (FPIs):"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Urban_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___c4629f45_chunk_50",
+          "regulator": "RBI",
+          "section": "48.  Simplified KYC norms for Foreign Portfolio Investors (FPIs):"
+        },
+        {
+          "chunk_id": "SEBI_Master_Circular_for_Depositories__bc113d4f_chunk_12",
+          "regulator": "SEBI",
+          "section": "10 Reference: SEBI Circular MIRSD/1/2015 dated March 04, 2015"
+        },
+        {
+          "chunk_id": "SEBI_Review_of_validation_of_KYC_records_by_KRAs_under_Risk_Management_Framework____58161e76_chunk_1",
+          "regulator": "SEBI",
+          "section": "5. What are the benefits of KYC?"
+        }
+      ],
+      "family": "applicability"
+    },
+    {
+      "question": "What is the timeline for submission of Suspicious Transaction Report to FIU-IND?",
+      "query_date": "2024-01-01",
+      "answer": "The Suspicious Transaction Report (STR) shall be submitted within 7 days of arriving at a conclusion that any transaction, whether cash or non-cash, or a series of transactions integrally connected are of suspicious nature [SEBI_Guidelines_on_Anti-Money_Laundering__AML__Standards_and_Combating_the_Financing_of_Terrorism__CFT___Obligations_of_Securities_Market_Intermediaries_un__450620ca_chunk_33].",
+      "original_answer": "The Suspicious Transaction Report (STR) shall be submitted within 7 days of arriving at a conclusion that any transaction, whether cash or non-cash, or a series of transactions integrally connected are of suspicious nature [SEBI_Guidelines_on_Anti-Money_Laundering__AML__Standards_and_Combating_the_Financing_of_Terrorism__CFT___Obligations_of_Securities_Market_Intermediaries_un__450620ca_chunk_33].",
+      "answer_status": "FULLY_SUPPORTED",
+      "coverage": 1.0,
+      "n_atoms": 3,
+      "n_supported": 1,
+      "n_verified": 2,
+      "n_uncertain": 0,
+      "n_abstained": 0,
+      "n_not_verified": 0,
+      "judge_calls": 2,
+      "latency": {
+        "retrieve": 0.797,
+        "generate": 0.013,
+        "extract": 0.007,
+        "verify": 1.641,
+        "score": 8.513,
+        "decide": 24.26,
+        "rewrite": 0.0
+      },
+      "sources": [
+        {
+          "chunk_id": "SEBI_Guidelines_on_Anti-Money_Laundering__AML__Standards_and_Combating_the_Financing_of_Terrorism__CFT___Obligations_of_Securities_Market_Intermediaries_un__450620ca_chunk_33",
+          "regulator": "SEBI",
+          "section": "74. Registered  intermediaries shall carefully go through all the reporting"
+        },
+        {
+          "chunk_id": "SEBI_Guidelines_on_Anti-Money_Laundering__AML__Standards_and_Combating_the_Financing_of_Terrorism__CFT___Obligations_of_Securities_Market_Intermediaries_un__450620ca_chunk_32",
+          "regulator": "SEBI",
+          "section": "74. Registered  intermediaries shall carefully go through all the reporting"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__All_India_Financial_Institutions___Know_Your_Customer__Directions__2025__Updated_as_on_December_29__2025___442a9a96_chunk_51",
+          "regulator": "RBI",
+          "section": "51. When furnishing information to the Director, FIU-IND, a delay of each day in not"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Non-Banking_Financial_Companies___Know_Your_Customer__Directions__2025__Updated_as_on_December_29__2025___c7c2dbda_chunk_50",
+          "regulator": "RBI",
+          "section": "paragraph 23 or paragraph 26 and 27."
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Commercial_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___54a8672c_chunk_54",
+          "regulator": "RBI",
+          "section": "55. To identify and report suspicious transactions effectively, the bank shall implement"
+        },
+        {
+          "chunk_id": "RBI_Reserve_Bank_of_India__Rural_Co-operative_Banks___Know_Your_Customer__Directions__2025__Updated_as_on_September_18__2026___913f5c12_chunk_57",
+          "regulator": "RBI",
+          "section": "53. When furnishing information to the Director, FIU-IND, a delay of each day in"
+        }
+      ],
+      "family": "threshold"
+    },
+    {
+      "question": "What are the disclosure requirements for listed companies under SEBI LODR regulations?",
+      "query_date": "2024-01-01",
+      "answer": "This answer cannot be provided. The system was unable to verify any of the claims against the available regulatory evidence. Please consult the original regulatory documents directly.",
+      "original_answer": "Based on the provided evidence, the disclosure requirements for listed companies under the SEBI LODR Regulations include the following:\n\n**1. Employee Benefit Scheme Documents**\nListed entities must comply with Regulation 46(2)(za) of the LODR Regulations regarding the disclosure of Employee Benefit Scheme Documents [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55]:\n*   **Upload Requirement:** The scheme document must be uploaded on the listed entity\u2019s website after obtaining shareholder approval as required under SEBI (SBEB) Regulations, 2021 [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   **Minimum Information:** The uploaded documents must mandatorily contain the minimum information to be disclosed to shareholders as per SEBI (SBEB) Regulations, 2021 [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   **Redaction Approval:** Any redaction of information (excluding commercial secrets or information affecting competitive position) must have its rationale and justification placed before the board of directors for consideration and approval [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   **Compliance Confirmation:** The secretarial compliance report issued by a Peer Reviewed Company Secretary under Regulation 24A(2) of the LODR Regulations must include a confirmation of compliance with these requirements [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n\n**2. Single Filing System**\nListed entities must utilize the single filing facility put in place by BSE and NSE w.e.f. October 1, 2024 [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55]. This currently applies to:\n*   Statement on redressal of investor grievances under Regulation 13(3) [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   Corporate governance report under Regulation 27(2) [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   Reconciliation of share capital audit report [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   Disclosure of voting results under Regulation 44(3) [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n\n**3. System Driven Disclosure**\nStock Exchanges, in consultation with SEBI, will specify processes for system-driven disclosure of:\n*   Shareholding Pattern under Regulation 31(1)(b) [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n*   New rating(s) or revision in ratings under Regulation 30(6) read with sub-para 3 of para A of part A of schedule III [SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4] [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55].\n\n**4. Timelines for Disclosure of Material Events**\nUnder Regulation 30(6), listed entities must disclose material events to stock exchanges as soon as reasonably possible, and in any case not later than:\n*   **Thirty minutes** from the closure of the board meeting where the decision was taken. However, if the board meeting closes after normal trading hours but more than three hours before the next trading day, disclosure must be made within **three hours** from the closure [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_241].\n*   **Twelve hours** from the occurrence of the event if it emanates from within the listed entity [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_241].\n*   **Twenty-four hours** from the occurrence of the event if it does not emanate from within the listed entity [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_241].\n*   Specific events such as acquisitions, schemes of arrangement, or sales of undertakings must be disclosed within **12 hours** [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_241].\n\n**5. Financial Disclosures**\n*   Listed entities must submit quarterly and annual financial results (audited/unaudited) in accordance with Regulation 33 [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_14].\n*   Formats for financial results must follow the specifications in Integrated Filing (Financial) Annexure-25 of the Master Circular [SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Sec",
+      "answer_status": "PARTIALLY_VERIFIED",
+      "coverage": 0.0,
+      "n_atoms": 9,
+      "n_supported": 0,
+      "n_verified": 0,
+      "n_uncertain": 0,
+      "n_abstained": 7,
+      "n_not_verified": 2,
+      "judge_calls": 2,
+      "latency": {
+        "retrieve": 0.759,
+        "generate": 0.016,
+        "extract": 24.533,
+        "verify": 4.589,
+        "score": 26.527,
+        "decide": 9.09,
+        "rewrite": 0.0
+      },
+      "sources": [
+        {
+          "chunk_id": "SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_4",
+          "regulator": "SEBI",
+          "section": "13. Stock Exchanges, in consultation with SEBI, shall specify the process, procedure and"
+        },
+        {
+          "chunk_id": "SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_55",
+          "regulator": "SEBI",
+          "section": "74 SEBI (Share Based Employee Benefits and Sweat Equity) Regulations, 2021"
+        },
+        {
+          "chunk_id": "SEBI_Monitoring_Shareholding_of_Market_Infrastructure_Institutions__MIIs___55650d1f_chunk_2",
+          "regulator": "SEBI",
+          "section": "paragraph 4.9 of this circular."
+        },
+        {
+          "chunk_id": "SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_241",
+          "regulator": "SEBI",
+          "section": "2. In order to bring clarity in the above timelines for disclosure of material events or"
+        },
+        {
+          "chunk_id": "SEBI_Master_Circular_for_compliance_with_the_provisions_of_the_Securities_and_Exchange_Board_of_India__Listing_Obligations_and_Disclosure_Requirements__Reg__fa3b4360_chunk_14",
+          "regulator": "SEBI",
+          "section": "4. The statement of cash flows shall be in terms of the relevant accounting standard i.e.,"
+        },
+        {
+          "chunk_id": "SEBI_Circular_for_implementation_of_recommendations_of_the_Expert_Committee_for_facilitating_ease_of_doing_business_for_listed_entities__da128ba8_chunk_1",
+          "regulator": "SEBI",
+          "section": "1 Expert Committee for facilitating ease of doing business and harmonization of the provisions of th"
+        }
+      ],
+      "family": "section"
+    },
+    {
+      "question": "What is the penalty for non-compliance with SEBI Insider Trading regulations?",
+      "family": "entity",
+      "answer_status": "ERROR",
+      "coverage": 0.0,
+      "n_atoms": 0,
+      "n_supported": 0,
+      "n_verified": 0,
+      "n_uncertain": 0,
+      "n_abstained": 0,
+      "n_not_verified": 0,
+      "judge_calls": 0,
+      "latency": {},
+      "answer": "",
+      "sources": [],
+      "error": "RetryError[<Future at 0x2da50826150 state=finished raised RateLimitError>]"
+    }
+  ],
+  "m7": {
+    "threshold": null,
+    "violation_rate": 0.0,
+    "n_atoms": 20
+  },
+  "m10_summary": {
+    "seed": 42,
+    "n_atoms": 20,
+    "eps": 0.05,
+    "delta": 0.1,
+    "accept_threshold": 0.35,
+    "hallucination_rate": 0.0,
+    "coverage": 0.5,
+    "aurc": 0.22669,
+    "violation_rate": 0.0,
+    "violation_rate_ok": true,
+    "retrieval_recall_at_6": 0.4967,
+    "retrieval_mrr": 0.335583,
+    "generated_on": "2026-10-02"
+  },
+  "ablation_table": [
+    {
+      "condition": "Full RegGuard (all components)",
+      "hallucination_rate": 0.0,
+      "coverage": 0.15,
+      "aurc": 0.22669
+    },
+    {
+      "condition": "No V1 (skip deterministic verifier)",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.226978
+    },
+    {
+      "condition": "No V2 (skip NLI verifier)",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.226815
+    },
+    {
+      "condition": "No s_div signal",
+      "hallucination_rate": 0.0,
+      "coverage": 0.2,
+      "aurc": 0.225624
+    },
+    {
+      "condition": "No s_ret signal",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.231566
+    },
+    {
+      "condition": "No s_nli signal",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.230717
+    },
+    {
+      "condition": "No s_ent signal",
+      "hallucination_rate": 0.0,
+      "coverage": 0.15,
+      "aurc": 0.22669
+    },
+    {
+      "condition": "No s_mech signal",
+      "hallucination_rate": 0.0,
+      "coverage": 0.15,
+      "aurc": 0.230554
+    },
+    {
+      "condition": "No Mondrian (global threshold)",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.229699
+    },
+    {
+      "condition": "No drift calibration",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.225473
+    },
+    {
+      "condition": "No V3 judge",
+      "hallucination_rate": 0.0,
+      "coverage": 0.25,
+      "aurc": 0.231465
+    }
+  ],
+  "retrieval_metrics": {
+    "recall_at_6": 0.4967,
+    "recall_at_10": 0.5017,
+    "mrr": 0.335583,
+    "precision_at_6": 0.1375,
+    "n_queries": 200
+  },
+  "extraction_metrics": {
+    "RATE": {
+      "recall": 0.96,
+      "precision": 0.90566,
+      "f1": 0.932039
+    },
+    "THRESHOLD": {
+      "recall": 0.94,
+      "precision": 0.903846,
+      "f1": 0.921569
+    },
+    "SECTION": {
+      "recall": 0.96,
+      "precision": 0.90566,
+      "f1": 0.932039
+    },
+    "DATE": {
+      "recall": 0.94,
+      "precision": 0.903846,
+      "f1": 0.921569
+    },
+    "ENTITY": {
+      "recall": 0.86,
+      "precision": 0.895833,
+      "f1": 0.877551
+    },
+    "APPLICABILITY": {
+      "recall": 0.84,
+      "precision": 0.893617,
+      "f1": 0.865979
+    }
+  },
+  "drift_table": {
+    "cutoff_date": "2023-01-01",
+    "n_pre": 12,
+    "n_post": 8,
+    "best_strategy": null,
+    "strategies": [
+      {
+        "strategy": "static",
+        "violation_rate": 0.785,
+        "hallucination_rate": 1.0,
+        "coverage": 0.25,
+        "n_calibration": 12,
+        "n_test": 8,
+        "recalibrated": false
+      },
+      {
+        "strategy": "sliding_window",
+        "violation_rate": 0.785,
+        "hallucination_rate": 1.0,
+        "coverage": 0.25,
+        "n_calibration": 6,
+        "n_test": 8,
+        "recalibrated": true
+      },
+      {
+        "strategy": "recency_weighted",
+        "violation_rate": 0.785,
+        "hallucination_rate": 1.0,
+        "coverage": 0.25,
+        "n_calibration": 12,
+        "n_test": 8,
+        "recalibrated": true
+      },
+      {
+        "strategy": "triggered",
+        "violation_rate": 0.785,
+        "hallucination_rate": 1.0,
+        "coverage": 0.25,
+        "n_calibration": 12,
+        "n_test": 8,
+        "recalibrated": true
+      }
+    ]
+  }
+}

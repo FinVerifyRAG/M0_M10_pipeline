@@ -1,0 +1,23 @@
+/* FinVerifyRAG — Tailwind v4 entry + token imports */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+@theme {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-ink-950: #0A1519;
+  --color-ink-900: #0F1F25;
+  --color-ink-800: #162B33;
+  --color-ink-700: #1F3A44;
+  --color-ink-500: #4F6F7A;
+  --color-paper-100: #F3EEE4;
+  --color-paper-300: #CFC8B8;
+  --color-brass-500: #C9A45C;
+  --color-brass-300: #E3C98E;
+  --color-ok: #34B89A;
+  --color-warn: #F0A93A;
+  --color-stop: #E4573D;
+}

@@ -1,0 +1,74 @@
+# configs/app.yaml
+# M9: Application Layer (FastAPI + Streamlit) configuration
+# -----------------------------------------------------------
+
+# ── FastAPI ───────────────────────────────────────────────────────────────────
+api:
+  host: "0.0.0.0"
+  port: 8000
+  title: "RegGuard API"
+  description: "Regulatory QA pipeline with atom-level verification and risk certificates."
+  version: "1.0.0"
+
+  # Maximum question length accepted by the API
+  max_question_chars: 1000
+
+  # Session history: max turns kept per session
+  max_history_turns: 10
+
+  # CORS allowed origins (empty = allow all for dev)
+  cors_origins: []
+
+# ── Pipeline wiring ───────────────────────────────────────────────────────────
+pipeline:
+  # Propagate the query date from the user; fall back to today when absent
+  default_date_today: true
+
+  # Skip the judge (skip_judge=True) in demo / low-latency mode
+  skip_judge: false
+
+  # Rewrite mode sent to decision.answer_rewrite
+  # "flag" | "trim" | "stub_on_abstain" | "none"
+  rewrite_mode: "flag"
+
+  # How many source chunks to include in the API response
+  max_sources: 6
+
+  # Latency logging: record per-stage wall-clock times
+  log_latency: true
+
+# ── Badge mapping ─────────────────────────────────────────────────────────────
+badge:
+  # Risk score thresholds for badge labels
+  # risk <= low_max  -> "LOW"
+  # risk <= med_max  -> "MEDIUM"
+  # risk >  med_max  -> "HIGH"
+  low_max: 0.25
+  med_max: 0.60
+
+  # Colour hex codes (used in Streamlit UI)
+  low_color:  "#1F6B4A"   # Forest green
+  med_color:  "#9A6B2F"   # Amber
+  high_color: "#8B2E2E"   # Burgundy
+
+  # Status badge styles for atom-level decisions
+  # SUPPORTED / VERIFIED -> green
+  # UNCERTAIN            -> amber
+  # ABSTAINED / NOT_VERIFIED -> red
+  status_colors:
+    SUPPORTED:    "#1F6B4A"
+    VERIFIED:     "#1F6B4A"
+    UNCERTAIN:    "#9A6B2F"
+    ABSTAINED:    "#8B2E2E"
+    NOT_VERIFIED: "#8B2E2E"
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+streamlit:
+  # Page title shown in browser tab
+  page_title: "RegGuard — Regulatory QA"
+
+  # Maximum characters shown per source chunk preview
+  source_preview_chars: 300
+
+  # Show raw JSON debug panel in the UI (disable for demo)
+  show_debug_panel: false
